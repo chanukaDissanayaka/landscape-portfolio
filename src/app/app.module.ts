@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 
 // import { NO_ERRORS_SCHEMA } from '@angular/core';
 
@@ -12,13 +12,17 @@ import { NavigationbarComponent } from './navigationbar/navigationbar.component'
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
+import { HomeCarouselComponent } from './home-carousel/home-carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PortfolioComponent,
     AboutComponent,
-    NavigationbarComponent
+    NavigationbarComponent,
+    HomeComponent,
+    HomeCarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -30,5 +34,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
